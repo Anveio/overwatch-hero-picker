@@ -1,5 +1,8 @@
 import * as React from 'react';
 
+import HeroOptions from './HeroOptions';
+import HeroPicks from './HeroPicks';
+
 export class App extends React.Component<{}, {}> {
   render() {
     return (
@@ -12,6 +15,8 @@ export class App extends React.Component<{}, {}> {
 
           <div className="character">Bastion</div>
         </div>
+        <HeroPicks />
+        <HeroOptions />
 
         <div className="select">
           <button>Select</button>

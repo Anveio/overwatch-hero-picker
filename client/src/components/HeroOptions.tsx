@@ -1,43 +1,39 @@
 import * as React from 'react';
 
+const roster = {
+  offense: [
+    'genji',
+    'mccree',
+    'pharah',
+    'reaper',
+    'soldier',
+    'sombra',
+    'tracer'
+  ],
+  defense: ['bastion', 'hanzo', 'junkrat', 'mei', 'torbjorn', 'widowmaker'],
+  tank: ['dva', 'orisa', 'reinhardt', 'roadhog', 'winston', 'zarya'],
+  support: ['ana', 'lucio', 'mercy', 'symmetra', 'zenyatta']
+};
+
 export default () => {
+  const heroCategories = (): JSX.Element[] =>
+    Object.keys(roster).map(category => {
+      return (
+        <div className="category" key={category}>
+          {fillCategory(category)}
+        </div>
+      );
+    });
+
+  const fillCategory = (category: string) => {
+    return roster[category].map((hero: string | undefined, i: number) => {
+      return <div className={`option ${hero}`} key={i} />;
+    });
+  };
+  
   return (
     <div className="heroes">
-      <div className="category">
-        <div className="option genji" />
-        <div className="option mccree" />
-        <div className="option pharah" />
-        <div className="option reaper" />
-        <div className="option soldier-76" />
-        <div className="option sombra" />
-        <div className="option tracer" />
-      </div>
-
-      <div className="category">
-        <div className="option bastion" />
-        <div className="option hanzo" />
-        <div className="option junkrat" />
-        <div className="option mei" />
-        <div className="option torbjorn" />
-        <div className="option widowmaker" />
-      </div>
-
-      <div className="category">
-        <div className="option dva" />
-        <div className="option orisa" />
-        <div className="option reinhardt" />
-        <div className="option roadhog" />
-        <div className="option winston" />
-        <div className="option zarya" />
-      </div>
-
-      <div className="category">
-        <div className="option ana" />
-        <div className="option lucio" />
-        <div className="option mercy" />
-        <div className="option symmetra" />
-        <div className="option zenyatta" />
-      </div>
+      {heroCategories()}
     </div>
   );
 };
