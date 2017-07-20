@@ -17,7 +17,7 @@ declare type OffenseHero =
   | 'mccree'
   | 'pharah'
   | 'reaper'
-  | 'soldier'
+  | 'soldier-76'
   | 'sombra'
   | 'tracer';
 

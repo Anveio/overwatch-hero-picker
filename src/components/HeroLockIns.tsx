@@ -7,9 +7,9 @@ interface Props {
 
 export default ({ players }: Props) => {
   const playerPicks = () => {
-    return players.map((player: Player) => {
+    return players.map((player: Player, i) => {
       return (
-        <div className={`selection `} key={player.name}>
+        <div className={`selection `} key={i}>
           <div className={`hero ${player.lockIn}`} />
           <div className="info">
             <div className="name">

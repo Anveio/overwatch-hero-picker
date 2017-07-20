@@ -3,24 +3,17 @@ import '../styles/App.css';
 
 import GameInfo from './GameInfo';
 import HeroOptions from './HeroOptions';
-import HeroPicks from './HeroLockIns';
+import HeroLockIns from './HeroLockIns';
+
+import { samplePlayers } from '../utils';
 
 interface State {
   players: Player[];
 }
 
-const initialPlayers: Player[] = [
-  { name: 'Me', lockIn: 'bastion' },
-  { name: 'Jerm10297', lockIn: 'mercy' },
-  { name: 'Manlton', lockIn: 'hanzo' },
-  { name: 'Dann', lockIn: 'widowmaker' },
-  { name: 'Madh20rat', lockIn: 'soldier' },
-  { name: 'Gecko', lockIn: 'tracer' }
-];
-
 export class App extends React.Component<{}, State> {
   state = {
-    players: initialPlayers
+    players: samplePlayers.slice(0, 6)
   };
 
   changeHeroPick = (name: string, newPick: Hero) => {
@@ -43,7 +36,7 @@ export class App extends React.Component<{}, State> {
     return (
       <div className="container">
         <GameInfo />
-        <HeroPicks players={this.state.players} />
+        <HeroLockIns players={this.state.players} />
         <HeroOptions onPick={this.changeHeroPick} />
 
         <div className="select">

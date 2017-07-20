@@ -1,20 +1,7 @@
 import * as React from 'react';
 import '../styles/HeroOptions.css';
 
-const roster = {
-  offense: [
-    'genji',
-    'mccree',
-    'pharah',
-    'reaper',
-    'soldier',
-    'sombra',
-    'tracer'
-  ],
-  defense: ['bastion', 'hanzo', 'junkrat', 'mei', 'torbjorn', 'widowmaker'],
-  tank: ['dva', 'orisa', 'reinhardt', 'roadhog', 'winston', 'zarya'],
-  support: ['ana', 'lucio', 'mercy', 'symmetra', 'zenyatta']
-};
+import { roster } from '../utils';
 
 interface Props {
   onPick: (name: string, newPick: Hero) => void;
