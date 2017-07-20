@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+
+body * {
+  box-sizing: border-box;
+}
+
+video {
+  height: 600px;
+  position: absolute;
+  opacity: .3;
+}
+
+@font-face {
+  font-family: Overwatch;
+  src: url("./fonts/BigNoodleToo.ttf");
+}
+
+

@@ -1,19 +1,20 @@
 import * as React from 'react';
+import '../styles/HeroPicks.css';
 
-const players = [
-  'Lukosa',
-  'Jerm10297',
-  'Manlton',
-  'Dann',
-  'Madh20rat',
-  'Gecko'
+const players: Player[] = [
+  { name: 'Lukosa' },
+  { name: 'Jerm10297' },
+  { name: 'Manlton' },
+  { name: 'Dann' },
+  { name: 'Madh20rat' },
+  { name: 'Gecko' }
 ];
 
 export default () => {
   const playerPicks = () => {
-    return players.map(player => {
+    return players.map((player: Player) => {
       return (
-        <div className="selection" key={player}>
+        <div className="selection" key={player.name}>
           <div className="hero" />
           <div className="info">
             <div className="name">Dann</div>

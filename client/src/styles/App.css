@@ -1,0 +1,32 @@
+.container {
+  background: url("./img/bastion.jpg") no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: grid;
+  min-height: 600px;
+  width: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: 268px 39px 140px 83px 1fr;
+  grid-template-areas: "top" "countdown" "selections" "heroes" "select";
+}
+
+.select {
+  grid-area: select;
+  display: flex;
+  justify-content: center;
+}
+
+.select button {
+  height: 32px;
+  width: 110px;
+  border: none;
+  margin-top: 15px;
+  font-size: 22px;
+  font-family: Overwatch;
+  letter-spacing: 2px;
+  color: #fff;
+  background: #b47900;
+}
+.select button:hover {
+  background: #df9600;
+}

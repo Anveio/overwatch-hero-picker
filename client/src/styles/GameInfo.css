@@ -1,0 +1,31 @@
+.gameinfo {
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 23px;
+}
+
+.gametype {
+  font-size: 90px;
+  font-style: italic;
+  font-family: Overwatch;
+  color: #ce1631;
+}
+
+.map {
+  font-size: 28px;
+  font-family: Overwatch;
+  font-style: italic;
+  color: #fff;
+  position: relative;
+  top: -42px;
+  left: 13px;
+}
+.character {
+  font-size: 55px;
+  font-style: italic;
+  font-family: Overwatch;
+  color: #fff;
+  position: relative;
+  top: 13px;
+  left: -12px;
+}

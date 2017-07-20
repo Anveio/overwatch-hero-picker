@@ -1,4 +1,5 @@
 import * as React from 'react';
+import '../styles/HeroOptions.css';
 
 const roster = {
   offense: [
@@ -30,7 +31,7 @@ export default () => {
       return <div className={`option ${hero}`} key={i} />;
     });
   };
-  
+
   return (
     <div className="heroes">
       {heroCategories()}

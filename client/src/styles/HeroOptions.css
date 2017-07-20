@@ -1,3 +1,34 @@
+.heroes {
+  grid-area: heroes;
+  display: grid;
+  grid-template-columns: 241px 213px 206px 177px;
+  margin: auto;
+  grid-column-gap: 32px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+}
+
+.option {
+  width: 30px;
+  height: 44px;
+  background: black;
+  margin-right: 3.2px;
+  background-size: cover;
+  transform: skewX(-15deg);
+  transform-origin: bottom left;
+  box-shadow: inset 0px 2px 0px 0px #fff, inset 0px -1px 0px 0px #fff;
+  border-radius: 3px;
+  transition-duration: 25ms;
+}
+.option:hover {
+  transform: scale(1.15) skewX(-15deg) translate(-2px, 2px);
+  box-shadow: 0px 0px 0px 3px #fff;
+  z-index: 2;
+}
+
 .option.genji {
   background-image: url("./img/heroes/genji.png");
 }
@@ -72,34 +103,4 @@
 }
 .option.zenyatta {
   background-image: url("./img/heroes/zenyatta.png");
-}
-
-[hero=bastion] {
-  background-image: url(./img/selected-heroes/bastion.png);
-  background-position: 18px 2px;
-}
-
-[hero=mercy] {
-  background-image: url(./img/selected-heroes/mercy.png);
-  background-position: 18px 2px;
-}
-
-[hero=hanzo] {
-  background-image: url(./img/selected-heroes/hanzo.png);
-  background-position: 18px 2px;
-}
-
-[hero=widowmaker] {
-  background-image: url(./img/selected-heroes/widowmaker.png);
-  background-position: 9px 2px;
-}
-
-[hero=soldier-76] {
-  background-image: url(./img/selected-heroes/soldier-76.png);
-  background-position: 7px 2px;
-}
-
-[hero=tracer] {
-  background-image: url(./img/selected-heroes/tracer.png);
-  background-position: 19px 2px;
 }

@@ -1,5 +1,7 @@
 import * as React from 'react';
+import '../styles/App.css';
 
+import GameInfo from './GameInfo';
 import HeroOptions from './HeroOptions';
 import HeroPicks from './HeroPicks';
 
@@ -7,14 +9,7 @@ export class App extends React.Component<{}, {}> {
   render() {
     return (
       <div className="container">
-        <div className="gameinfo">
-          <div className="match">
-            <div className="gametype">Attack</div>
-            <div className="map">King's Row</div>
-          </div>
-
-          <div className="character">Bastion</div>
-        </div>
+        <GameInfo />
         <HeroPicks />
         <HeroOptions />
 
