@@ -16,7 +16,11 @@ const roster = {
   support: ['ana', 'lucio', 'mercy', 'symmetra', 'zenyatta']
 };
 
-export default () => {
+interface Props {
+  onPick: (name: string, newPick: Hero) => void;
+}
+
+export default ({ onPick }: Props) => {
   const heroCategories = (): JSX.Element[] =>
     Object.keys(roster).map(category => {
       return (
@@ -27,8 +31,14 @@ export default () => {
     });
 
   const fillCategory = (category: string) => {
-    return roster[category].map((hero: string | undefined, i: number) => {
-      return <div className={`option ${hero}`} key={i} />;
+    return roster[category].map((hero: Hero, i: number) => {
+      return (
+        <div
+          className={`option ${hero}`}
+          key={i}
+          onClick={() => onPick('Me', hero)}
+        />
+      );
     });
   };
 
