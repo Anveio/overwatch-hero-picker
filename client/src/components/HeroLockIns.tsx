@@ -9,8 +9,8 @@ export default ({ players }: Props) => {
   const playerPicks = () => {
     return players.map((player: Player) => {
       return (
-        <div className="selection" key={player.name}>
-          <div className="hero" />
+        <div className={`selection `} key={player.name}>
+          <div className={`hero ${player.lockIn}`} />
           <div className="info">
             <div className="name">
               {player.name}

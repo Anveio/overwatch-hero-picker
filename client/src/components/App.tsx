@@ -10,7 +10,7 @@ interface State {
 }
 
 const initialPlayers: Player[] = [
-  { name: 'Me' },
+  { name: 'Me', lockIn: 'bastion' },
   { name: 'Jerm10297', lockIn: 'mercy' },
   { name: 'Manlton', lockIn: 'hanzo' },
   { name: 'Dann', lockIn: 'widowmaker' },
