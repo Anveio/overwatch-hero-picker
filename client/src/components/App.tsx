@@ -5,12 +5,29 @@ import GameInfo from './GameInfo';
 import HeroOptions from './HeroOptions';
 import HeroPicks from './HeroPicks';
 
-export class App extends React.Component<{}, {}> {
+interface State {
+  players: Player[];
+}
+
+const initialPlayers: Player[] = [
+  { name: 'You' },
+  { name: 'Jerm10297', lockIn: 'mercy' },
+  { name: 'Manlton', lockIn: 'hanzo' },
+  { name: 'Dann', lockIn: 'widowmaker' },
+  { name: 'Madh20rat', lockIn: 'soldier' },
+  { name: 'Gecko', lockIn: 'tracer' }
+];
+
+export class App extends React.Component<{}, State> {
+  state = {
+    players: initialPlayers
+  };
+
   render() {
     return (
       <div className="container">
         <GameInfo />
-        <HeroPicks />
+        <HeroPicks players={this.state.players} />
         <HeroOptions />
 
         <div className="select">

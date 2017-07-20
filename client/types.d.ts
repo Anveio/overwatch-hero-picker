@@ -1,6 +1,5 @@
 interface Player {
   name: string;
-  hovering?: Hero;
   lockIn?: Hero;
 }
 
